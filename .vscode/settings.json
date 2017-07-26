@@ -1,0 +1,19 @@
+{
+  "pasteImage.path": "${currentFileDir}/images",
+  "pasteImage.basePath": "${currentFileDir}",
+  "pasteImage.prefix": "./",
+  "pasteImage.forceUnixStyleSeparator": true,
+  "pasteImage.insertPattern": "![](${imageFilePath})",
+  "eslint.nodePath": "./node_modules/eslint",
+  "eslint.packageManager": "yarn",
+  "eslint.alwaysShowStatus": true,
+  "javascript.preferences.quoteStyle": "auto",
+  "insertDateString.format": "YYYY-MM-DDThh:mm:ss+09:00",
+  "css.lint.unknownAtRules": "ignore",
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative"
+}

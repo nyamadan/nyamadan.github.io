@@ -1,0 +1,28 @@
+---
+title: Next.jsをGitHub Pagesに展開する
+tags:
+  - tech
+  - memo
+  - next.js
+createdAt: 2020-11-27T23:35:08+09:00
+---
+
+## 展開する時にはまったこと
+
+このBlogはGitHub Pagesを使ってホスティングしているけど、展開するときにちょっと躓いた。
+
+### アンダースコア付のフォルダはデプロイされない
+
+Next.jsは `_next` というフォルダを作るため、これが展開されずに404になる。
+これを避けるには`.nojekyll` という空のファイルを展開すればよいらしい。
+`.nojekyll`を`public`以下に置いておけば`next build && next export`したときに`out`以下にコピーされるのでそれを展開する。
+
+### gh-pagesが.nojekyllを展開しない
+
+[gh-pages](https://github.com/tschaub/gh-pages)を使えばビルド結果をそのままpushしてデプロイできるけど、
+初期設定ではドットから始まるファイルを無視してしまうため`.nojekyll`が結局展開されない。
+なので、`--dotfiles`オプションを使う。
+
+```
+gh-pages --dotfiles -b master -d ./out
+```

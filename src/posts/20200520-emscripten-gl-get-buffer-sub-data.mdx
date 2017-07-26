@@ -1,0 +1,28 @@
+---
+title: "Emscriptenに実装されていないWebGLメソッドを呼ぶ"
+tags:
+  - tech
+createdAt: "2020-05-10T15:36:15.2909323+09:00"
+description: "glGetBufferSubDataを使いたかったがEmscriptenに実装がなかった。"
+---
+
+glGetBufferSubDataを使いたかったがEmscriptenに実装がなかった。
+
+[Issue](https://github.com/emscripten-core/emscripten/issues/5861)が作られてて、 `EM_ASM` を使えば呼び出せると書かれていたのでこれを使うことにした。
+
+```cpp
+auto size = bufferWidth * bufferHeight * 4;
+auto ptr = std::make_unique<uint8_t[]>(size);
+EM_ASM({
+    Module.ctx.getBufferSubData(
+        Module.ctx.PIXEL_PACK_BUFFER,
+        0,
+        HEAPU8.subarray($0, $0 + $1));
+}, ptr.get(), size);
+```
+
+本当は[glMapBufferRange](https://www.khronos.org/registry/OpenGL-Refpages/es3.0/html/glMapBufferRange.xhtml)を使いたかったんだけど、これは[WebGLでは使えない](https://www.khronos.org/registry/webgl/specs/latest/2.0/#5.14)。
+
+やむなくこの部分だけ `getBufferSubData` で代替することにした。
+
+ときどきふむなぁ、こういうの。

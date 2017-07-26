@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "command": "node_modules/.bin/next build && node_modules/.bin/next export",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "label": "build"
+    },
+    {
+      "type": "shell",
+      "command": "node_modules/.bin/rimraf .next build out",
+      "problemMatcher": [],
+      "label": "clean"
+    },
+    {
+      "type": "shell",
+      "command": "node_modules/.bin/next dev",
+      "group": "build",
+      "problemMatcher": [],
+      "isBackground": true,
+      "label": "dev"
+    },
+    {
+      "type": "shell",
+      "command": "node_modules/.bin/eslint --ext .ts,.tsx ./src",
+      "problemMatcher": "$eslint-stylish",
+      "label": "lint"
+    },
+    {
+      "type": "shell",
+      "command": "node_modules/.bin/jest",
+      "problemMatcher": "$jest",
+      "label": "test"
+    },
+    {
+      "type": "shell",
+      "command": "node_modules/.bin/start-storybook -p 6006",
+      "problemMatcher": [],
+      "label": "storybook"
+    }
+  ]
+}

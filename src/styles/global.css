@@ -1,0 +1,28 @@
+@tailwind base;
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+@layer base {
+  body {
+    @apply font-sans;
+    @apply bg-gray-100;
+    @apply text-gray-900;
+    @apply font-mono;
+  }
+
+  a {
+    @apply transform;
+    @apply transition-colors;
+    @apply duration-500;
+  }
+
+  a:hover {
+    @apply text-gray-600;
+  }
+}

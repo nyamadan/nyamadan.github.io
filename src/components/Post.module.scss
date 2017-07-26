@@ -1,0 +1,72 @@
+@mixin heading {
+  @apply font-bold;
+  &:hover:before {
+    content: "#";
+    @apply absolute;
+    @apply -ml-3;
+    @apply font-normal;
+    @apply text-gray-800;
+    @apply underline;
+  }
+}
+
+.container {
+  @apply mx-auto;
+  @apply font-sans;
+
+  h1 {
+    @include heading();
+    @apply text-xl;
+    @apply mt-2;
+    @apply mb-1;
+    @apply tracking-wide;
+    @apply underline;
+  }
+  h2 {
+    @include heading();
+    @apply text-lg;
+    @apply mt-2;
+    @apply mb-1;
+    @apply tracking-wide;
+    @apply underline;
+  }
+  h3 {
+    @include heading();
+    @apply text-base;
+    @apply mt-2;
+    @apply mb-1;
+    @apply tracking-wide;
+    @apply underline;
+  }
+  h4 {
+    @include heading();
+    @apply text-sm;
+    @apply mt-2;
+    @apply mb-1;
+    @apply tracking-wide;
+    @apply underline;
+  }
+  h5, h6 {
+    @include heading();
+    @apply text-xs;
+    @apply mt-2;
+    @apply mb-1;
+    @apply tracking-wide;
+    @apply underline;
+  }
+  img {
+    @apply max-w-full;
+  }
+
+  p {
+    @apply leading-6;
+
+    a {
+      @apply text-blue-400;
+    }
+
+    a:hover {
+      @apply text-blue-700;
+    }
+  }
+}
