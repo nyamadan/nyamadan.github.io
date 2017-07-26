@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IVFReader</title>
+    <script id="vs" type="text/vertex-shader">
+    attribute vec4 position;
+    uniform vec2 resolution;
+    varying vec2 uv0;
+    varying vec2 uv1;
+    varying vec2 uv2;
+
+    void main() {
+        vec2 offset = 0.5 / resolution;
+        vec2 uv = vec2(position.x, position.y) * 0.5 + 0.5;
+
+        uv0 = vec2(uv.x, uv.y * 2.0 / 3.0);
+        uv1 = vec2(uv.x * 0.5, (2.0 + uv.y) / 3.0 + offset.y);
+        uv2 = vec2((uv.x + 1.0) * 0.5 + offset.x, (2.0 + uv.y) / 3.0 + offset.y);
+
+        gl_Position = position;
+    }
+    </script>
+
+    <script id="fs" type="text/fragment-shader">
+    precision mediump float;
+
+    uniform sampler2D video;
+
+    varying vec2 uv0;
+    varying vec2 uv1;
+    varying vec2 uv2;
+
+    void main() {
+        float y = texture2D(video, uv0).a;
+        float u = texture2D(video, uv1).a - 0.5;
+        float v = texture2D(video, uv2).a - 0.5;
+        gl_FragColor = vec4(y + 1.402 * v, y - 0.334 * u - 0.714 * v, y + 1.772 * u, 1.0);
+    }
+    </script>
+    <script src="./js/twgl-full.js"></script>
+    <script src="./build/IVFReader.js"></script>
+</head>
+
+<body>
+    <h1>IVFReader</h1>
+    <canvas id="c" width="720" height="400"></canvas>
+    <p>本デモページでは<a href="https://peach.blender.org/">Big Buck Bunny</a>のトレイラームービー及び<a href="https://www.webmproject.org/">WebM Projects</a>の成果物であるlibvpxを使用しています。</p>
+</body>
+
+</html>
