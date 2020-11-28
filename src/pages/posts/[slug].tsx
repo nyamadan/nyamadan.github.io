@@ -1,5 +1,4 @@
 import React from "react";
-import { useRouter } from "next/router";
 import Seo from "components/Seo";
 import { getPostData } from "lib/post";
 import Layout from "../../components/Layout";
@@ -8,27 +7,28 @@ import ogp from "../../lib/server/write_ogp_image";
 import PostLayout from "../../components/PostLayout";
 import PostComponent from "../../components/Post";
 import Page from "../../components/Page";
+import ShareButtons from "../../components/ShareButtons";
 
 interface Props {
   slug: string;
 }
 
 export default function Post({ slug }: Props) {
-  const router = useRouter();
   const { description, tags, title } = getPostData(slug);
-
   return (
     <Page>
       <Seo
         title={`${title} - nyamadan.github.io`}
         description={description}
         keyword={tags.join(",")}
-        url={`${process.env.baseUrl}${router.asPath}`}
         image={`${process.env.baseUrl}/images/ogp/posts/${slug}.png`}
       />
       <Layout>
         <PostLayout slug={slug}>
           <PostComponent slug={slug} />
+          <div className="container max-w-xl mx-auto flex justify-start my-4">
+            <ShareButtons text={title} />
+          </div>
         </PostLayout>
       </Layout>
     </Page>

@@ -16,15 +16,22 @@ function rehypeImage() {
       return;
     }
 
+    const props = `{...require(${JSON.stringify(node.properties.src)})}`;
+    const lqip = `${node.properties.src}?lqip`;
+    const placeholder = `require(${JSON.stringify(lqip)})`;
+    const alt = JSON.stringify(node.properties.alt);
     /* eslint-disable no-param-reassign */
     node.type = "jsx";
-    node.value = node.properties.alt
-      ? `<img src={require("${node.properties.src}")} alt="${node.properties.alt}" />`
-      : `<img src={require("${node.properties.src}")} />`;
+    node.value = `<KeepAspectRatioImage ${props} alt={${alt}} placeholder={${placeholder}} />`;
     /* eslint-enable no-param-reassign */
   };
 
   return (tree) => {
+    tree.children.unshift({
+      type: "import",
+      value: `import KeepAspectRatioImage from "components/KeepAspectRatioImage";`,
+    });
+
     visit(tree, "element", visitor);
   };
 }

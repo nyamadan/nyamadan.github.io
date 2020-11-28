@@ -40,34 +40,33 @@ export default function Bio({
           m-2
         "
       />
-      <div
+      <ul
         className="
           flex
           flex-col
-          justify-center
+          justify-between
           p-2
         "
       >
-        <div className="font-bold">
+        <li>
           <Link prefetch={prefetch} href="/about">
-            <a>nyamadan</a>
+            <a className="font-bold leading-4">nyamadan</a>
           </Link>
-        </div>
-        <div className="font-sans">Webと3Dが好き</div>
-        <div className="flex flex-row items-center text-black">
+        </li>
+        <li className="font-sans">Webと3Dが好き</li>
+        <li className="flex flex-row space-x-2 text-lg">
           <Link prefetch={prefetch} href="https://twitter.com/nyamadandan/">
             <a target="_blank" rel="noopener noreferrer">
-              <FaTwitter className="h-4 mr-2" />
+              <FaTwitter className="text-twitter hover:text-twitter" />
             </a>
           </Link>
-
           <Link prefetch={prefetch} href="https://github.com/nyamadan/">
             <a target="_blank" rel="noopener noreferrer">
-              <FaGithub className="h-4 mr-2" />
+              <FaGithub />
             </a>
           </Link>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   );
 }

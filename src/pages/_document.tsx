@@ -44,16 +44,8 @@ class MyDocument extends Document {
 
   render(): ReactElement {
     return (
-      <Html>
+      <Html lang="ja">
         <Head>
-          {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-17058943-8"
-          />
-          {/* eslint-disable-next-line react/no-danger */}
-          <script dangerouslySetInnerHTML={{ __html: gtag }} />
-          <meta charSet="utf-8" />
           <link
             rel="alternate"
             type="application/rss+xml"
@@ -61,6 +53,14 @@ class MyDocument extends Document {
             href={`${process.env.baseUrl}/rss.xml`}
           />
           <link key="favicon" rel="icon" href="/favicon.ico" />
+          {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+          <meta charSet="utf-8" />
+          <script
+            src="https://www.googletagmanager.com/gtag/js?id=UA-17058943-8"
+            async
+          />
+          {/* eslint-disable-next-line react/no-danger */}
+          <script dangerouslySetInnerHTML={{ __html: gtag }} />
         </Head>
         <body>
           <Main />

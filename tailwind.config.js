@@ -5,6 +5,11 @@ module.exports = {
   },
   purge: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        hatena: "#009AD0",
+        twitter: "#1DA1F2",
+      },
+    },
   },
 };

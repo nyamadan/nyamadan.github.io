@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { toFormattedDate } from "../lib/date";
 import { PostData } from "../lib/post";
+import s from "./PostThumbnail.module.scss";
 
 interface Props {
   post: PostData;
@@ -12,19 +13,7 @@ export default function PostThumbnail({ prefetch, post }: Props) {
   const { title, description, createdAt, tags, slug } = post;
   return (
     <Link prefetch={prefetch} href={`/posts/${slug}`}>
-      <a
-        className="
-          block
-          max-w-full
-          h-48
-          border
-          rounded
-          shadow-md
-          border-gray-900
-          overflow-hidden
-          p-2
-        "
-      >
+      <a className={s.thumbnail}>
         <span
           className="
             text-center

@@ -1,0 +1,16 @@
+---
+title: LQIPにかけるフィルター
+tags:
+  - tech
+  - memo
+createdAt: 2020-12-01T23:28:20+09:00
+---
+
+画像のプレースホルダーとして[LQIP: Low Quality Images Placeholder](https://github.com/zouhir/lqip)をdata-urlとして、
+埋め込んでおくとかできるけど、[これにblurをかけるといい感じらしい](https://github.com/zouhir/lqip-loader/issues/5)のでメモ。
+
+```css
+img {
+  filter: blur(25px);
+}
+```

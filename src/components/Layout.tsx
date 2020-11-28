@@ -10,7 +10,9 @@ export const TwoColumns = ({ children }: { children: React.ReactNode }) => (
     className="
         flex
         flex-row
-        relative
+        container
+        max-w-5xl
+        mx-auto
       "
   >
     {children}
@@ -24,7 +26,7 @@ export const TwoColumnsLeft = ({
 }) => (
   <div
     className="
-      w-full
+      container
       p-4
     "
   >
@@ -70,10 +72,10 @@ export default function Layout({ children }: Props) {
         className="
           mt-auto
           mb-0
+          py-4
           text-center
         "
       >
-        <hr />
         powered by next.js
         <br />© 2020 nyamadan
       </footer>

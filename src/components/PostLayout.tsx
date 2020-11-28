@@ -15,9 +15,14 @@ export default function PostLayout({ slug, children }: Props) {
     <TwoColumns>
       <TwoColumnsLeft>{children}</TwoColumnsLeft>
       <TwoColumnsRight>
+        <Heading>Author</Heading>
         <Bio />
         <OutlineComponent outline={outline} />
       </TwoColumnsRight>
     </TwoColumns>
   );
+}
+
+function Heading({ children }: { children?: React.ReactNode }) {
+  return <h2 className="font-bold text-lg mt-2 mb-1">{children}</h2>;
 }

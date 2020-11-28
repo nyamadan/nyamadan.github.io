@@ -25,10 +25,11 @@ export default function PostsMenuLayout({ archives, tags, children }: Props) {
             flex
             flex-row
             flex-wrap
+            justify-start
           "
         >
           {tags.map(({ name, count }) => (
-            <li key={name}>
+            <li className="my-1 mr-2" key={name}>
               <TagLink tag={name} count={count} />
             </li>
           ))}
@@ -51,6 +52,6 @@ export default function PostsMenuLayout({ archives, tags, children }: Props) {
   );
 }
 
-const Heading = ({ children }: { children?: React.ReactNode }) => (
-  <h2 className="font-bold text-lg mt-2 mb-1">{children}</h2>
-);
+function Heading({ children }: { children?: React.ReactNode }) {
+  return <h2 className="font-bold text-lg mt-2 mb-1">{children}</h2>;
+}

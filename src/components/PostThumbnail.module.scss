@@ -1,0 +1,25 @@
+.thumbnail {
+  @apply block;
+  @apply max-w-full;
+  @apply h-48;
+  @apply border;
+  @apply rounded;
+  @apply shadow-md;
+  @apply border-gray-900;
+  @apply overflow-hidden;
+  @apply p-2;
+  @apply relative;
+
+  &:after {
+    @apply block;
+    @apply absolute;
+    @apply bottom-0;
+    @apply left-0;
+    @apply w-full;
+    @apply h-full;
+    @apply h-24;
+
+    content: "";
+    background: linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 1.0));
+  }
+}

@@ -12,6 +12,7 @@ import Layout from "../components/Layout";
 import PostsMenuLayout from "../components/PostsMenuLayout";
 import Page from "../components/Page";
 import PostThumbnail from "../components/PostThumbnail";
+import PostsGrid from "../components/PostsGrid";
 
 interface Props {
   recents: readonly string[];
@@ -20,31 +21,11 @@ interface Props {
 }
 
 export default function Posts({ recents, tags, archives }: Props) {
-  const recentPosts = recents.map((x) => getPostData(x));
-
   return (
     <Page>
       <Layout>
         <PostsMenuLayout tags={tags} archives={archives}>
-          <div
-            className="
-            container
-            max-w-4xl
-            mx-auto
-            grid
-            gap-4
-            grid-flow-row
-            grid-cols-1
-            sm:grid-cols-2
-            lg:grid-cols-3
-            "
-          >
-            {recentPosts.map((post) => (
-              <div key={post.slug}>
-                <PostThumbnail post={post} />
-              </div>
-            ))}
-          </div>
+          <PostsGrid slugs={recents} />
         </PostsMenuLayout>
       </Layout>
     </Page>

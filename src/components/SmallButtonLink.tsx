@@ -29,7 +29,6 @@ export default function SmallButtonLink({
                 rounded-md
                 py-0
                 px-2
-                mr-2
               "
       >
         {children}

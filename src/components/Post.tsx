@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { FaCalendar } from "react-icons/fa";
 import { getPostComponent, getPostData } from "../lib/post";
 import { toFormattedDate } from "../lib/date";
@@ -16,18 +15,14 @@ export default function Post({ slug }: Props) {
 
   return (
     <div className="mx-auto container max-w-xl">
-      <Link href={`/posts/${slug}`}>
-        <a>
-          <h2 className="font-bold text-2xl text-center font-sans my-3">
-            {title}
-          </h2>
-        </a>
-      </Link>
-      <div className="text-center my-3">
+      <h2 className="font-bold text-2xl text-center font-sans my-3">{title}</h2>
+      <ul className="flex my-3 space-x-2 justify-center">
         {tags.map((tag) => (
-          <TagLink key={tag} tag={tag} />
+          <li key={tag}>
+            <TagLink tag={tag} />
+          </li>
         ))}
-      </div>
+      </ul>
       <div
         className="
           flex

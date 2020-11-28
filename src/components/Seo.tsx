@@ -20,7 +20,7 @@ export default function Seo({
 }: Props): JSX.Element {
   const router = useRouter();
   const urlOrDefault =
-    url ?? normalizeUrl(`${process.env.baseUrl}${router.pathname}`);
+    url ?? normalizeUrl(`${process.env.baseUrl}${router.asPath}`);
   const titleOrDefault = title ?? "nyamadan.github.io";
   const keywordOrDefault = keyword ?? "programmer,blog";
   const imageOrDefault = image ?? `${process.env.baseUrl}/images/ogp/ogp.png`;
@@ -29,6 +29,11 @@ export default function Seo({
   return (
     <Head>
       <title key="title">{titleOrDefault}</title>
+      <meta
+        key="description"
+        name="description"
+        content={descriptionOrDefault}
+      />
       <meta key="og:title" property="og:title" content={titleOrDefault} />
       <meta
         key="og:description"
@@ -44,7 +49,11 @@ export default function Seo({
         content={titleOrDefault}
       />
       <meta key="keywords" name="keywords" content={keywordOrDefault} />
-      <meta key="twitter:card" name="twitter:card" content="summary" />
+      <meta
+        key="twitter:card"
+        name="twitter:card"
+        content="summary_large_image"
+      />
       <meta key="twitter:site" name="twitter:site" content="@nyamadandan" />
       <meta key="twitter:url" name="twitter:url" content={imageOrDefault} />
       <meta key="twitter:title" name="twitter:title" content={titleOrDefault} />
