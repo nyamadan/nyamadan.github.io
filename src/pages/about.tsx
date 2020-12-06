@@ -2,16 +2,18 @@ import React, { ReactNode } from "react";
 import Link from "next/link";
 import Layout from "../components/Layout";
 import Page from "../components/Page";
-import { profile128x128 } from "../images";
+import KeepAspectRatioImage from "../components/KeepAspectRatioImage";
 
 function Abstract() {
   return (
     <div className="mx-auto container max-w-md">
-      <img
-        className="mr-1 mb-1 w-24 h-24 float-left"
-        src={profile128x128}
-        alt="icon"
-      />
+      <div className="w-24 h-24 mr-1 mb-1 float-left overflow-hidden rounded-full">
+        <KeepAspectRatioImage
+          // eslint-disable-next-line global-require
+          {...require("../images/icon.png")}
+          alt="nyamadan"
+        />
+      </div>
       <div className="m-1 font-sans text-sm">
         <p>1986年生まれのプログラマ。</p>
         <p>

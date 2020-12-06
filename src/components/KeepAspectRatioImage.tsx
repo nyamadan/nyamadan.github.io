@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 interface Props {
   src: string;
@@ -6,6 +6,7 @@ interface Props {
   height: number;
   alt?: string;
   placeholder?: string;
+  className?: string;
 }
 
 export default function KeepAspectRatioImage({
@@ -14,26 +15,33 @@ export default function KeepAspectRatioImage({
   height,
   alt,
   placeholder,
+  className,
 }: Props) {
-  const style = {
+  const img = useRef<HTMLImageElement | null>(null);
+  const [visible, setVisible] = useState(true);
+  const placeholderStyle = {
     paddingTop: `${(100.0 * height) / width}%`,
+    backgroundImage: `url(${placeholder ?? src})`,
+    backgroundSize: "contain",
+    filter: "blur(25px)",
   };
 
-  if (placeholder != null && !src.startsWith("data:")) {
-    Object.assign(style, {
-      backgroundImage: `url(${placeholder})`,
-      backgroundSize: "contain",
-      filter: "blur(25px)",
-    });
-  }
+  useEffect(() => {
+    setVisible(img.current?.complete ?? false);
+  }, [img.current?.complete, src]);
+
+  const onLoad = useCallback(() => {
+    setVisible(true);
+  }, [setVisible]);
 
   return (
     <div
-      className="
+      className={`
         relative
         max-w-full
         overflow-hidden
-      "
+        ${className ?? ""}
+      `}
       style={{
         width: `${width}px`,
       }}
@@ -42,18 +50,23 @@ export default function KeepAspectRatioImage({
         className="
           w-full
         "
-        style={style}
+        style={placeholderStyle}
       />
       <img
+        ref={img}
         src={src}
-        className="
+        className={`
           absolute
           top-0
           left-0
           w-full
           h-auto
-        "
+          duration-500
+          ${placeholder ? "transition-opacity" : "transition-none"}
+          ${visible ? "opacity-100" : "opacity-0"}
+        `}
         alt={alt}
+        onLoad={onLoad}
       />
     </div>
   );
