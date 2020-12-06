@@ -58,7 +58,7 @@ export default function KeepAspectRatioImage({
           left-0
           w-full
           h-auto
-          duration-500
+          duration-200
           ${placeholder ? "transition-opacity" : "transition-none"}
           ${visible ? "opacity-100" : "opacity-0"}
         `}
