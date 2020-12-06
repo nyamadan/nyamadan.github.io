@@ -6,7 +6,6 @@ interface Props {
   height: number;
   alt?: string;
   placeholder?: string;
-  className?: string;
 }
 
 export default function KeepAspectRatioImage({
@@ -15,10 +14,9 @@ export default function KeepAspectRatioImage({
   height,
   alt,
   placeholder,
-  className,
 }: Props) {
   const img = useRef<HTMLImageElement | null>(null);
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   const placeholderStyle = {
     paddingTop: `${(100.0 * height) / width}%`,
     backgroundImage: `url(${placeholder ?? src})`,
@@ -40,7 +38,6 @@ export default function KeepAspectRatioImage({
         relative
         max-w-full
         overflow-hidden
-        ${className ?? ""}
       `}
       style={{
         width: `${width}px`,
