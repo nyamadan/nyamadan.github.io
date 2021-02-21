@@ -15,6 +15,15 @@ gtag('js', new Date());
 gtag('config', 'UA-17058943-8');
 `;
 
+const gtm = `
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NV8B2M9');</script>
+<!-- End Google Tag Manager -->
+`;
+
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
@@ -46,13 +55,6 @@ class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          <link
-            rel="alternate"
-            type="application/rss+xml"
-            title="RSS feed for blog posts"
-            href={`${process.env.baseUrl}/rss.xml`}
-          />
-          <link key="favicon" rel="icon" href="/favicon.ico" />
           {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
           <meta charSet="utf-8" />
           <script
@@ -61,8 +63,29 @@ class MyDocument extends Document {
           />
           {/* eslint-disable-next-line react/no-danger */}
           <script dangerouslySetInnerHTML={{ __html: gtag }} />
+          {/* <!-- Google Tag Manager --> */}
+          {/* eslint-disable-next-line react/no-danger */}
+          <script dangerouslySetInnerHTML={{ __html: gtm }} />
+          <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="RSS feed for blog posts"
+            href={`${process.env.baseUrl}/rss.xml`}
+          />
+          <link key="favicon" rel="icon" href="/favicon.ico" />
         </Head>
         <body>
+          {/* <!-- Google Tag Manager (noscript) --> */}
+          <noscript>
+            {/* eslint-disable-next-line jsx-a11y/iframe-has-title */}
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-NV8B2M9"
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+          {/* <!-- End Google Tag Manager (noscript) --> */}
           <Main />
           <NextScript />
         </body>
