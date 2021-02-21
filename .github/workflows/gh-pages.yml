@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '15.x'
       - name: Install Noto Sans
-        run: sudo apt-get install fonts-noto-cjk
+        run: sudo apt-get install fonts-noto-cjk fonts-noto-cjk-extra
       - name: Install dependencies
         run: yarn --frozen-lockfile
       - name: Build
