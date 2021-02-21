@@ -18,7 +18,7 @@ export default async function writeOgpImage(slug: string) {
 <svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
   <style>
     text {
-      font-family: "Noto Sans CJK JP", "Noto Sans JP", sans-serif;;
+      font-family: "Noto Sans CJK", "Noto Sans CJK JP", "Noto Sans JP", sans-serif;;
     }
   </style>
   <rect
