@@ -6,7 +6,7 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build && next export",
-    "deploy": "npm run clean && npm run build && gh-pages --dotfiles -b master -d ./out",
+    "deploy": "gh-pages --dotfiles -b master -d ./out",
     "clean": "rimraf .next out public/images/ogp/posts/*.png",
     "lint": "eslint --ext .ts,.tsx ./src",
     "test": "jest",
