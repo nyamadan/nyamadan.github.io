@@ -3,7 +3,7 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - pages
+      - main
 
 jobs:
   build:
@@ -23,6 +23,6 @@ jobs:
       - name: Deploy
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/nyamadan/nyamadan.github.io.git
-          npx gh-pages --dotfiles -b master -d ./out -u "github-actions-bot <support+actions@github.com>"
+          npx gh-pages --dotfiles -b pages -d ./out -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
