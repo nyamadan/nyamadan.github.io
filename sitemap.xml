@@ -1,0 +1,85 @@
+
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>https://nyamadan.github.io</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+    <url>
+      <loc>https://nyamadan.github.io</loc>
+      <lastmod>Sun, 06 Dec 2020 12:41:24 GMT</lastmod>
+      <changefreq>weekly</changefreq>
+    </url>
+    
+  <url>
+    <loc>https://nyamadan.github.io/posts/20201206-switch</loc>
+    <lastmod>Sun, 06 Dec 2020 12:41:24 GMT</lastmod>
+    <changefreq>never</changefreq>
+  </url>
+
+  <url>
+    <loc>https://nyamadan.github.io/posts/20201201-kindle-paperwhite</loc>
+    <lastmod>Tue, 01 Dec 2020 14:38:18 GMT</lastmod>
+    <changefreq>never</changefreq>
+  </url>
+
+  <url>
+    <loc>https://nyamadan.github.io/posts/20201201-lqip</loc>
+    <lastmod>Tue, 01 Dec 2020 14:28:20 GMT</lastmod>
+    <changefreq>never</changefreq>
+  </url>
+
+  <url>
+    <loc>https://nyamadan.github.io/posts/20201201-web-design</loc>
+    <lastmod>Tue, 01 Dec 2020 00:37:23 GMT</lastmod>
+    <changefreq>never</changefreq>
+  </url>
+
+  <url>
+    <loc>https://nyamadan.github.io/posts/20201127-nextjs-ghpages</loc>
+    <lastmod>Fri, 27 Nov 2020 14:35:08 GMT</lastmod>
+    <changefreq>never</changefreq>
+  </url>
+
+  <url>
+    <loc>https://nyamadan.github.io/posts/20201126-monad</loc>
+    <lastmod>Thu, 26 Nov 2020 14:25:50 GMT</lastmod>
+    <changefreq>never</changefreq>
+  </url>
+
+  <url>
+    <loc>https://nyamadan.github.io/posts/20200520-emscripten-gl-get-buffer-sub-data</loc>
+    <lastmod>Sun, 10 May 2020 06:36:15 GMT</lastmod>
+    <changefreq>never</changefreq>
+  </url>
+
+  <url>
+    <loc>https://nyamadan.github.io/posts/20200426-shader-include</loc>
+    <lastmod>Sun, 26 Apr 2020 12:56:49 GMT</lastmod>
+    <changefreq>never</changefreq>
+  </url>
+
+  <url>
+    <loc>https://nyamadan.github.io/posts/20200411-show-toast</loc>
+    <lastmod>Sat, 11 Apr 2020 09:31:30 GMT</lastmod>
+    <changefreq>never</changefreq>
+  </url>
+
+  <url>
+    <loc>https://nyamadan.github.io/posts/20200409-glslViewer</loc>
+    <lastmod>Thu, 09 Apr 2020 13:48:32 GMT</lastmod>
+    <changefreq>never</changefreq>
+  </url>
+
+  <url>
+    <loc>https://nyamadan.github.io/posts/20200408-gh-pages</loc>
+    <lastmod>Wed, 08 Apr 2020 12:36:44 GMT</lastmod>
+    <changefreq>never</changefreq>
+  </url>
+
+  <url>
+    <loc>https://nyamadan.github.io/posts/20200407-hello-world</loc>
+    <lastmod>Tue, 07 Apr 2020 02:56:32 GMT</lastmod>
+    <changefreq>never</changefreq>
+  </url>
+
+  </urlset>

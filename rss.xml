@@ -1,0 +1,109 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Blog - nyamadan.github.io</title>
+      <link>https://nyamadan.github.io</link>
+      <description>プログラマの日常など</description>
+      <language>ja</language>
+      <lastBuildDate>Sun, 06 Dec 2020 12:41:24 GMT</lastBuildDate>
+      <atom:link href="https://nyamadan.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+      
+    <item>
+      <guid>https://nyamadan.github.io/posts/20201206-switch</guid>
+      <title>Switch買った</title>
+      <link>https://nyamadan.github.io/posts/20201206-switch</link>
+      <description>最近運動不足気味なのでリングフィットアドベンチャーとSwitchを買った。</description>
+      <pubDate>Sun, 06 Dec 2020 12:41:24 GMT</pubDate>
+    </item>
+
+    <item>
+      <guid>https://nyamadan.github.io/posts/20201201-kindle-paperwhite</guid>
+      <title>Kindle Paperwhiteを買った</title>
+      <link>https://nyamadan.github.io/posts/20201201-kindle-paperwhite</link>
+      <description>セールしていたのでEcho Dotと一緒に買ってしまった。</description>
+      <pubDate>Tue, 01 Dec 2020 14:38:18 GMT</pubDate>
+    </item>
+
+    <item>
+      <guid>https://nyamadan.github.io/posts/20201201-lqip</guid>
+      <title>LQIPにかけるフィルター</title>
+      <link>https://nyamadan.github.io/posts/20201201-lqip</link>
+      <description>画像のプレースホルダーとしてLQIP: Low Quality Images Placeholderをdata-urlとして、
+埋め込んでおくとかできるけど、これにblurをかけるといい感じらしいのでメモ。</description>
+      <pubDate>Tue, 01 Dec 2020 14:28:20 GMT</pubDate>
+    </item>
+
+    <item>
+      <guid>https://nyamadan.github.io/posts/20201201-web-design</guid>
+      <title>ウェブデザイン勉強したい</title>
+      <link>https://nyamadan.github.io/posts/20201201-web-design</link>
+      <description>ウェブデザインの勉強したいけど、何から始めたらいいかわからん。</description>
+      <pubDate>Tue, 01 Dec 2020 00:37:23 GMT</pubDate>
+    </item>
+
+    <item>
+      <guid>https://nyamadan.github.io/posts/20201127-nextjs-ghpages</guid>
+      <title>Next.jsをGitHub Pagesに展開する</title>
+      <link>https://nyamadan.github.io/posts/20201127-nextjs-ghpages</link>
+      <description>このBlogはGitHub Pagesを使ってホスティングしているけど、展開するときにちょっと躓いた。</description>
+      <pubDate>Fri, 27 Nov 2020 14:35:08 GMT</pubDate>
+    </item>
+
+    <item>
+      <guid>https://nyamadan.github.io/posts/20201126-monad</guid>
+      <title>わかりやすいMonad資料見つけた</title>
+      <link>https://nyamadan.github.io/posts/20201126-monad</link>
+      <description>Monadわからんって100年ぐらい言い続けてた私、30分でわかるJavaScriptプログラマのためのモナド入門読んでやっとわかった気がする。</description>
+      <pubDate>Thu, 26 Nov 2020 14:25:50 GMT</pubDate>
+    </item>
+
+    <item>
+      <guid>https://nyamadan.github.io/posts/20200520-emscripten-gl-get-buffer-sub-data</guid>
+      <title>Emscriptenに実装されていないWebGLメソッドを呼ぶ</title>
+      <link>https://nyamadan.github.io/posts/20200520-emscripten-gl-get-buffer-sub-data</link>
+      <description>glGetBufferSubDataを使いたかったがEmscriptenに実装がなかった。</description>
+      <pubDate>Sun, 10 May 2020 06:36:15 GMT</pubDate>
+    </item>
+
+    <item>
+      <guid>https://nyamadan.github.io/posts/20200426-shader-include</guid>
+      <title>ShaderEditorにincludeを追加</title>
+      <link>https://nyamadan.github.io/posts/20200426-shader-include</link>
+      <description>glslangを埋め込んだのでinclude拡張が使えるようになった</description>
+      <pubDate>Sun, 26 Apr 2020 12:56:49 GMT</pubDate>
+    </item>
+
+    <item>
+      <guid>https://nyamadan.github.io/posts/20200411-show-toast</guid>
+      <title>PowerShellでトーストを表示する</title>
+      <link>https://nyamadan.github.io/posts/20200411-show-toast</link>
+      <description>PowerShellでToastを表示したかったのでやってみた。</description>
+      <pubDate>Sat, 11 Apr 2020 09:31:30 GMT</pubDate>
+    </item>
+
+    <item>
+      <guid>https://nyamadan.github.io/posts/20200409-glslViewer</guid>
+      <title>glslViewerをWindowsでビルドする</title>
+      <link>https://nyamadan.github.io/posts/20200409-glslViewer</link>
+      <description>昔はWindowsではビルドできなかったようですが、最近Windowsでもビルドできるようになったようです。</description>
+      <pubDate>Thu, 09 Apr 2020 13:48:32 GMT</pubDate>
+    </item>
+
+    <item>
+      <guid>https://nyamadan.github.io/posts/20200408-gh-pages</guid>
+      <title>github.ioにgatsbyを展開する</title>
+      <link>https://nyamadan.github.io/posts/20200408-gh-pages</link>
+      <description>gh-pagesというnpmパッケージを使えば簡単にできるらしい。</description>
+      <pubDate>Wed, 08 Apr 2020 12:36:44 GMT</pubDate>
+    </item>
+
+    <item>
+      <guid>https://nyamadan.github.io/posts/20200407-hello-world</guid>
+      <title>Hello World</title>
+      <link>https://nyamadan.github.io/posts/20200407-hello-world</link>
+      <description>なんか書いていきます。</description>
+      <pubDate>Tue, 07 Apr 2020 02:56:32 GMT</pubDate>
+    </item>
+
+    </channel>
+  </rss>
