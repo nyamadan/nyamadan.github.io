@@ -1,27 +1,28 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const flatFilter = require("unist-util-flat-filter");
-const visit = require("unist-util-visit");
 /* eslint-enable @typescript-eslint/no-var-requires */
 
 function rehypePost() {
   return (tree) => {
-    visit(tree, (node) => {
-      if (node.type !== "element") {
-        return;
-      }
+    import("unist-util-visit").then(({ visit }) => {
+      visit(tree, (node) => {
+        if (node.type !== "element") {
+          return;
+        }
 
-      /**
-       * @type {string?}
-       */
-      const href = node?.properties?.href;
-      if (href != null && /^http?s:\/\//.test(href)) {
-        // eslint-disable-next-line no-param-reassign
-        node.properties = {
-          ...node.properties,
-          target: "_blank",
-          rel: "noopener noreferrer",
-        };
-      }
+        /**
+         * @type {string?}
+         */
+        const href = node?.properties?.href;
+        if (href != null && /^http?s:\/\//.test(href)) {
+          // eslint-disable-next-line no-param-reassign
+          node.properties = {
+            ...node.properties,
+            target: "_blank",
+            rel: "noopener noreferrer",
+          };
+        }
+      });
     });
 
     const elements = flatFilter(tree, (node) => {

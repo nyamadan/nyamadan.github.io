@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const visit = require("unist-util-visit");
-
 function rehypeImage() {
   /**
    *
@@ -32,7 +29,9 @@ function rehypeImage() {
       value: `import KeepAspectRatioImage from "components/KeepAspectRatioImage";`,
     });
 
-    visit(tree, "element", visitor);
+    import("unist-util-visit").then(({ visit }) => {
+      visit(tree, "element", visitor);
+    });
   };
 }
 
