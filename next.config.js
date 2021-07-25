@@ -80,6 +80,9 @@ module.exports = withMDX(
         adapter: sharp,
       },
       pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+      images: {
+        disableStaticImages: true,
+      },
     })
   )
 );
