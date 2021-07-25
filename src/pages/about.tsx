@@ -3,16 +3,13 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import Page from "../components/Page";
 import KeepAspectRatioImage from "../components/KeepAspectRatioImage";
+import icon from "../images/icon.png";
 
 function Abstract() {
   return (
     <div className="mx-auto container max-w-md">
       <div className="w-24 h-24 mr-1 mb-1 float-left overflow-hidden rounded-full">
-        <KeepAspectRatioImage
-          // eslint-disable-next-line global-require
-          {...require("../images/icon.png")}
-          alt="nyamadan"
-        />
+        <KeepAspectRatioImage src={icon} alt="nyamadan" />
       </div>
       <div className="m-1 font-sans text-sm">
         <p>1986年生まれのプログラマ。</p>

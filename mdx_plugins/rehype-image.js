@@ -17,7 +17,7 @@ function rehypeImage() {
       return;
     }
 
-    const props = `{...require(${JSON.stringify(node.properties.src)})}`;
+    const props = `src={require(${JSON.stringify(node.properties.src)})}`;
     const lqip = `${node.properties.src}?lqip`;
     const placeholder = `require(${JSON.stringify(lqip)})`;
     const alt = JSON.stringify(node.properties.alt);

@@ -2,6 +2,7 @@ import React, { ReactElement } from "react";
 import Link from "next/link";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import KeepAspectRatioImage from "./KeepAspectRatioImage";
+import icon from "../images/icon.png"
 
 export default function Bio({
   prefetch,
@@ -26,8 +27,7 @@ export default function Bio({
         <a>
           <div className="w-16 h-16 m-2 overflow-hidden rounded-full">
             <KeepAspectRatioImage
-              // eslint-disable-next-line global-require
-              {...require("../images/icon.png")}
+              src={icon}
               alt="nyamadan"
             />
           </div>
