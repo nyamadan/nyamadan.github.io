@@ -35,11 +35,9 @@ export default function Tag({ tag, posts, tags, archives }: Props) {
   );
 }
 
-export function getStaticProps({
-  params,
-}: {
-  params: { tag: string };
-}): { props: Props } {
+export function getStaticProps({ params }: { params: { tag: string } }): {
+  props: Props;
+} {
   const slugs = getSlugs();
   const { tag } = params;
   const { tags, archives } = getAllPostsData(slugs);

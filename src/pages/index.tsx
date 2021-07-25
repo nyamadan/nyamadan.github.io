@@ -2,16 +2,10 @@ import React from "react";
 
 import getSlugs from "lib/server/slugs";
 import writeSitemap from "lib/server/write_sitemap";
-import {
-  TagData,
-  ArchiveData,
-  getAllPostsData,
-  getPostData,
-} from "../lib/post";
+import { TagData, ArchiveData, getAllPostsData } from "../lib/post";
 import Layout from "../components/Layout";
 import PostsMenuLayout from "../components/PostsMenuLayout";
 import Page from "../components/Page";
-import PostThumbnail from "../components/PostThumbnail";
 import PostsGrid from "../components/PostsGrid";
 
 interface Props {

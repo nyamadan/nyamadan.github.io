@@ -1,22 +1,41 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 
-interface Props {
+type BaseProps = {
+  alt?: string;
+  placeholder?: string;
+};
+
+type S = {
   src: string;
   width: number;
   height: number;
-  alt?: string;
-  placeholder?: string;
-}
+};
 
-export default function KeepAspectRatioImage({
-  src,
-  width,
-  height,
-  alt,
-  placeholder,
-}: Props) {
+type U = {
+  src: string & {
+    width: number;
+    height: number;
+  };
+};
+
+type Props = BaseProps & (S | U);
+
+const isS = (params: S | U): params is S => {
+  const s = params as unknown as { width?: number; height?: number };
+  return s.width != null && s.height != null;
+};
+
+export default function KeepAspectRatioImage(props: Props) {
+  const { alt, placeholder } = props;
   const img = useRef<HTMLImageElement | null>(null);
   const [visible, setVisible] = useState(false);
+
+  /* eslint-disable react/destructuring-assignment */
+  const { src, width, height } = isS(props)
+    ? { src: props.src, width: props.width, height: props.height }
+    : { src: props.src, width: props.src.width, height: props.src.height };
+  /* eslint-enable react/destructuring-assignment */
+
   const placeholderStyle = {
     paddingTop: `${(100.0 * height) / width}%`,
     backgroundImage: `url(${placeholder ?? src})`,
