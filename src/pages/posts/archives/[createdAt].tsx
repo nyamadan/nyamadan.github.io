@@ -36,11 +36,7 @@ export default function CreatedAt({ tags, archives, date, posts }: Props) {
   );
 }
 
-export function getStaticProps({
-  params,
-}: {
-  params: { createdAt: string };
-}): {
+export function getStaticProps({ params }: { params: { createdAt: string } }): {
   props: Props;
 } {
   const slugs = getSlugs();

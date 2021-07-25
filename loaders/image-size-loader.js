@@ -3,6 +3,9 @@ const { promisify } = require("util");
 const sizeOf = promisify(require("image-size"));
 /* eslint-enable @typescript-eslint/no-var-requires */
 
+/**
+ * @param {string} source
+ */
 function loader(source) {
   const callback = this.async();
 
@@ -10,7 +13,10 @@ function loader(source) {
 
   sizeOf(resourcePath)
     .then(({ width, height }) => {
-      const result = `${source}
+      const result = `${source.replace(
+        /^export default /,
+        "module.exports = "
+      )};
 module.exports = Object.assign(module.exports, {
   src: module.exports,
   width: ${width || 0},

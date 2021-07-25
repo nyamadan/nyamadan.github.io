@@ -71,7 +71,6 @@ const baseUrl = `${protocol}://${host}`;
 module.exports = withMDX(
   withImageSize(
     withOptimizedImages({
-      webpack5: true,
       env: {
         host,
         protocol,
