@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import Link from "next/link";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import KeepAspectRatioImage from "./KeepAspectRatioImage";
-import icon from "../images/icon.png"
+import icon from "../images/icon.png";
 
 export default function Bio({
   prefetch,
@@ -26,10 +26,7 @@ export default function Bio({
       <Link href="/about">
         <a>
           <div className="w-16 h-16 m-2 overflow-hidden rounded-full">
-            <KeepAspectRatioImage
-              src={icon}
-              alt="nyamadan"
-            />
+            <KeepAspectRatioImage src={icon} alt="nyamadan" />
           </div>
         </a>
       </Link>
