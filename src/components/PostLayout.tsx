@@ -9,7 +9,7 @@ interface Props {
   children?: React.ReactNode;
 }
 
-export default function PostLayout({ slug, children }: Props) {
+const PostLayout = function PostLayout({ slug, children }: Props) {
   const { outline } = getPostData(slug);
   return (
     <TwoColumns>
@@ -21,8 +21,10 @@ export default function PostLayout({ slug, children }: Props) {
       </TwoColumnsRight>
     </TwoColumns>
   );
-}
+};
 
-function Heading({ children }: { children?: React.ReactNode }) {
+const Heading = function Heading({ children }: { children?: React.ReactNode }) {
   return <h2 className="font-bold text-lg mt-2 mb-1">{children}</h2>;
-}
+};
+
+export default PostLayout;

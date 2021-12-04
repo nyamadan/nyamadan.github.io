@@ -22,7 +22,7 @@ interface Props {
   archives: ArchiveData[];
 }
 
-export default function CreatedAt({ tags, archives, date, posts }: Props) {
+const CreatedAt = function CreatedAt({ tags, archives, date, posts }: Props) {
   return (
     <Page>
       <Layout>
@@ -34,7 +34,7 @@ export default function CreatedAt({ tags, archives, date, posts }: Props) {
       </Layout>
     </Page>
   );
-}
+};
 
 export function getStaticProps({ params }: { params: { createdAt: string } }): {
   props: Props;
@@ -62,3 +62,5 @@ export function getStaticPaths() {
   const paths = archives.map(({ key }) => `/posts/archives/${key}`);
   return { paths, fallback: false };
 }
+
+export default CreatedAt;

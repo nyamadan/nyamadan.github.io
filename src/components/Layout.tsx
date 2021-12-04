@@ -5,42 +5,51 @@ interface Props {
   children?: ReactNode;
 }
 
-export const TwoColumns = ({ children }: { children: React.ReactNode }) => (
-  <div
-    className="
+export const TwoColumns = function TwoColumns({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      className="
         flex
         flex-row
         container
         max-w-5xl
         mx-auto
       "
-  >
-    {children}
-  </div>
-);
+    >
+      {children}
+    </div>
+  );
+};
 
-export const TwoColumnsLeft = ({
+export const TwoColumnsLeft = function TwoColumnsLeft({
   children,
 }: {
   children?: React.ReactNode;
-}) => (
-  <div
-    className="
+}) {
+  return (
+    <div
+      className="
       container
       p-4
     "
-  >
-    {children}
-  </div>
-);
+    >
+      {children}
+    </div>
+  );
+};
 
-export const TwoColumnsRight = ({
+export const TwoColumnsRight = function TwoColumnsRight({
   children,
 }: {
   children?: React.ReactNode;
-}) => (
-  <div
-    className="
+}) {
+  return (
+    <div
+      className="
       container
       max-w-xs
       p-4
@@ -49,12 +58,13 @@ export const TwoColumnsRight = ({
       hidden
       md:block
     "
-  >
-    {children}
-  </div>
-);
+    >
+      {children}
+    </div>
+  );
+};
 
-export default function Layout({ children }: Props) {
+const Layout = function Layout({ children }: Props) {
   return (
     <div
       className="
@@ -81,4 +91,6 @@ export default function Layout({ children }: Props) {
       </footer>
     </div>
   );
-}
+};
+
+export default Layout;

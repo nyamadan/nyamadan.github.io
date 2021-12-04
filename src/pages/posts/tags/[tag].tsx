@@ -21,7 +21,7 @@ interface Props {
   archives: ArchiveData[];
 }
 
-export default function Tag({ tag, posts, tags, archives }: Props) {
+const Tag = function Tag({ tag, posts, tags, archives }: Props) {
   return (
     <Page>
       <Layout>
@@ -33,7 +33,7 @@ export default function Tag({ tag, posts, tags, archives }: Props) {
       </Layout>
     </Page>
   );
-}
+};
 
 export function getStaticProps({ params }: { params: { tag: string } }): {
   props: Props;
@@ -60,3 +60,5 @@ export function getStaticPaths() {
   const paths = tags.map(({ name }) => `/posts/tags/${name}`);
   return { paths, fallback: false };
 }
+
+export default Tag;

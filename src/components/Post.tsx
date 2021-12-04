@@ -9,7 +9,7 @@ interface Props {
   slug: string;
 }
 
-export default function Post({ slug }: Props) {
+const Post = function Post({ slug }: Props) {
   const Content = getPostComponent(slug);
   const { createdAt, tags, title } = getPostData(slug);
 
@@ -42,4 +42,6 @@ export default function Post({ slug }: Props) {
       </div>
     </div>
   );
-}
+};
+
+export default Post;

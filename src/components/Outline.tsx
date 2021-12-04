@@ -5,7 +5,7 @@ interface Props {
   outline: OutlineType;
 }
 
-export default function Outline({ outline }: Props) {
+const Outline = function Outline({ outline }: Props) {
   return (
     <ul
       className="
@@ -49,4 +49,6 @@ export default function Outline({ outline }: Props) {
       ))}
     </ul>
   );
-}
+};
+
+export default Outline;

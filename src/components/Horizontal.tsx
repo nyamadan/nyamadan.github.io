@@ -1,9 +1,10 @@
 import React from "react";
 
 // eslint-disable-next-line import/prefer-default-export
-export const PostHeadingSeparater = () => (
-  <hr
-    className="
+export const PostHeadingSeparater = function PostHeadingSeparater() {
+  return (
+    <hr
+      className="
       border-t-0
       border-r-0
       border-l-0
@@ -14,5 +15,6 @@ export const PostHeadingSeparater = () => (
       border-gray-900
       max-w-xs
     "
-  />
-);
+    />
+  );
+};

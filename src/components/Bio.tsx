@@ -4,11 +4,7 @@ import { FaGithub, FaTwitter } from "react-icons/fa";
 import KeepAspectRatioImage from "./KeepAspectRatioImage";
 import icon from "../images/icon.png";
 
-export default function Bio({
-  prefetch,
-}: {
-  prefetch?: boolean;
-}): ReactElement {
+const Bio = function Bio({ prefetch }: { prefetch?: boolean }): ReactElement {
   return (
     <div
       className="
@@ -68,4 +64,6 @@ export default function Bio({
       </ul>
     </div>
   );
-}
+};
+
+export default Bio;

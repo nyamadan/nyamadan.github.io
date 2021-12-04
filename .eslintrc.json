@@ -6,7 +6,7 @@
     "jest/globals": true
   },
   "extends": [
-    "airbnb",
+    "plugin:@next/next/recommended",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
@@ -22,7 +22,12 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["jest", "react", "@typescript-eslint"],
+  "plugins": [
+    "jest",
+    "react",
+    "import",
+    "@typescript-eslint"
+  ],
   "rules": {
     "import/extensions": [
       "error",
@@ -36,7 +41,10 @@
     "react/jsx-filename-extension": [
       "error",
       {
-        "extensions": [".jsx", ".tsx"]
+        "extensions": [
+          ".jsx",
+          ".tsx"
+        ]
       }
     ],
     "no-continue": "off",
@@ -44,7 +52,6 @@
     "no-restricted-syntax": "off",
     "import/no-extraneous-dependencies": "off",
     "react/require-default-props": "off",
-    "jsx-a11y/anchor-is-valid": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/jsx-props-no-spreading": "off",
     "jest/no-disabled-tests": "warn",
@@ -60,8 +67,15 @@
     },
     "import/resolver": {
       "node": {
-        "paths": ["src"],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "paths": [
+          "src"
+        ],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     }
   }

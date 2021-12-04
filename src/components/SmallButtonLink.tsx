@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-export default function SmallButtonLink({
+const SmallButtonLink = function SmallButtonLink({
   prefetch,
   href,
   children,
@@ -35,4 +35,6 @@ export default function SmallButtonLink({
       </a>
     </Link>
   );
-}
+};
+
+export default SmallButtonLink;

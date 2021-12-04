@@ -6,7 +6,7 @@ interface Props {
   slugs: readonly string[];
 }
 
-export default function PostsGrid({ slugs }: Props) {
+const PostsGrid = function PostsGrid({ slugs }: Props) {
   const posts = slugs.map((x) => getPostData(x));
   return (
     <div
@@ -26,4 +26,6 @@ export default function PostsGrid({ slugs }: Props) {
       ))}
     </div>
   );
-}
+};
+
+export default PostsGrid;

@@ -7,7 +7,7 @@ interface Props {
   text?: string;
 }
 
-export default function ShareButtons({ text }: Props) {
+const ShareButtons = function ShareButtons({ text }: Props) {
   const router = useRouter();
   const url = normalizeUrl(`${process.env.baseUrl}${router.asPath}`);
 
@@ -44,4 +44,6 @@ export default function ShareButtons({ text }: Props) {
       </li>
     </ul>
   );
-}
+};
+
+export default ShareButtons;
