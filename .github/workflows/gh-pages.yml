@@ -13,7 +13,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '17.x'
+          node-version: '16.x'
       - name: Install Noto Sans
         run: sudo apt-get install fonts-noto-cjk fonts-noto-cjk-extra
       - name: Install dependencies
