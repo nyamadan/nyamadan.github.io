@@ -83,6 +83,9 @@ module.exports = withMDX(
       images: {
         disableStaticImages: true,
       },
+      swcLoader: true,
+      swcMinify: true,
+      cpus: 4,
     })
   )
 );
