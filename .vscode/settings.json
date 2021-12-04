@@ -15,5 +15,8 @@
     "source.fixAll": true
   },
   "javascript.preferences.importModuleSpecifier": "relative",
-  "typescript.preferences.importModuleSpecifier": "relative"
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "files.associations": {
+    "*.css": "postcss"
+  }
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { FaCalendar } from "react-icons/fa";
 import { getPostComponent, getPostData } from "../lib/post";
 import { toFormattedDate } from "../lib/date";
-import s from "./Post.module.scss";
+import s from "./Post.module.css";
 import TagLink from "./TagLink";
 
 interface Props {
