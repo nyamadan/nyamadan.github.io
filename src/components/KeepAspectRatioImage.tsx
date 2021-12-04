@@ -25,7 +25,7 @@ const isS = (params: S | U): params is S => {
   return s.width != null && s.height != null;
 };
 
-export default function KeepAspectRatioImage(props: Props) {
+const KeepAspectRatioImage = function KeepAspectRatioImage(props: Props) {
   const { alt, placeholder } = props;
   const img = useRef<HTMLImageElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -86,4 +86,6 @@ export default function KeepAspectRatioImage(props: Props) {
       />
     </div>
   );
-}
+};
+
+export default KeepAspectRatioImage;

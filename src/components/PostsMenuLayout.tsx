@@ -12,7 +12,11 @@ interface Props {
   children?: React.ReactNode;
 }
 
-export default function PostsMenuLayout({ archives, tags, children }: Props) {
+const PostMenuLayout = function PostsMenuLayout({
+  archives,
+  tags,
+  children,
+}: Props) {
   return (
     <TwoColumns>
       <TwoColumnsLeft>{children}</TwoColumnsLeft>
@@ -50,8 +54,10 @@ export default function PostsMenuLayout({ archives, tags, children }: Props) {
       </TwoColumnsRight>
     </TwoColumns>
   );
-}
+};
 
-function Heading({ children }: { children?: React.ReactNode }) {
+const Heading = function Heading({ children }: { children?: React.ReactNode }) {
   return <h2 className="font-bold text-lg mt-2 mb-1">{children}</h2>;
-}
+};
+
+export default PostMenuLayout;

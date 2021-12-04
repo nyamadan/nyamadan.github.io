@@ -1,7 +1,7 @@
 import React from "react";
 import SmallButtonLink from "./SmallButtonLink";
 
-export default function TagLink({
+const TagLink = function TagLink({
   prefetch,
   tag,
   count,
@@ -17,4 +17,6 @@ export default function TagLink({
       {`${tag}${count != null ? ` (${count})` : ""}`}
     </SmallButtonLink>
   );
-}
+};
+
+export default TagLink;

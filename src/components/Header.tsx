@@ -2,7 +2,11 @@ import React, { ReactElement } from "react";
 import Link from "next/link";
 import { FaRss } from "react-icons/fa";
 
-function MenuItem({ children }: { children?: React.ReactNode }) {
+const MenuItem = function MenuItem({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
   return (
     <li
       className="
@@ -13,9 +17,9 @@ function MenuItem({ children }: { children?: React.ReactNode }) {
       {children}
     </li>
   );
-}
+};
 
-export default function Header(): ReactElement {
+const Header = function Header(): ReactElement {
   return (
     <header
       className="
@@ -82,12 +86,16 @@ export default function Header(): ReactElement {
       </nav>
     </header>
   );
-}
+};
 
-const RssLink = () => (
-  <Link href="/rss.xml">
-    <a>
-      <FaRss />
-    </a>
-  </Link>
-);
+const RssLink = function RssLink() {
+  return (
+    <Link href="/rss.xml">
+      <a>
+        <FaRss />
+      </a>
+    </Link>
+  );
+};
+
+export default Header;

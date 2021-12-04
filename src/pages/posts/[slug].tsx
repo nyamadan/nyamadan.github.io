@@ -13,7 +13,7 @@ interface Props {
   slug: string;
 }
 
-export default function Post({ slug }: Props) {
+const Post = function Post({ slug }: Props) {
   const { description, tags, title } = getPostData(slug);
   return (
     <Page>
@@ -33,7 +33,7 @@ export default function Post({ slug }: Props) {
       </Layout>
     </Page>
   );
-}
+};
 
 export async function getStaticProps({
   params,
@@ -52,3 +52,5 @@ export async function getStaticProps({
 export async function getStaticPaths() {
   return { paths: getSlugs().map((slug) => `/posts/${slug}`), fallback: false };
 }
+
+export default Post;

@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import Layout from "../components/Layout";
 import Page from "../components/Page";
 
-export default function Home(): ReactNode {
+const Home = function Home() {
   return (
     <Page>
       <Layout>
@@ -13,4 +13,6 @@ export default function Home(): ReactNode {
       </Layout>
     </Page>
   );
-}
+};
+
+export default Home;

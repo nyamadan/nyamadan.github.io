@@ -5,7 +5,7 @@ import Page from "../components/Page";
 import KeepAspectRatioImage from "../components/KeepAspectRatioImage";
 import icon from "../images/icon.png";
 
-function Abstract() {
+const Abstract = function Abstract() {
   return (
     <div className="mx-auto container max-w-md">
       <div className="w-24 h-24 mr-1 mb-1 float-left overflow-hidden rounded-full">
@@ -23,9 +23,9 @@ function Abstract() {
       <hr className="clear-left" />
     </div>
   );
-}
+};
 
-function Section({
+const Section = function Section({
   title,
   children,
 }: {
@@ -38,37 +38,53 @@ function Section({
       {children}
     </div>
   );
-}
+};
 
-function List({ children }: { children?: React.ReactNode }) {
+const List = function List({ children }: { children?: React.ReactNode }) {
   return <ul className="text-sm font-sans">{children}</ul>;
-}
+};
 
-function ListItem({ children }: { children?: React.ReactNode }) {
+const ListItem = function ListItem({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
   return <li>{children}</li>;
-}
+};
 
-function ListItemTitle({ children }: { children?: React.ReactNode }) {
+const ListItemTitle = function ListItemTitle({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
   return <h3 className="font-bold mt-2 mb-1 truncate">{children}</h3>;
-}
+};
 
-function ColList({ children }: { children?: React.ReactNode }) {
+const ColList = function ColList({ children }: { children?: React.ReactNode }) {
   return <ul>{children}</ul>;
-}
+};
 
-function ColListItem({ children }: { children?: React.ReactNode }) {
+const ColListItem = function ColListItem({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
   return <li className="leading-6">{children}</li>;
-}
+};
 
-function RowList({ children }: { children?: React.ReactNode }) {
+const RowList = function RowList({ children }: { children?: React.ReactNode }) {
   return <ul className="font-mono flex flex-row justify-center">{children}</ul>;
-}
+};
 
-function RowListItem({ children }: { children?: React.ReactNode }) {
+const RowListItem = function RowListItem({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
   return <li className="mx-1">{children}</li>;
-}
+};
 
-function RowLinkItem({
+const RowLinkItem = function RowLinkItem({
   href,
   prefetch,
   children,
@@ -86,9 +102,9 @@ function RowLinkItem({
       </Link>
     </RowListItem>
   );
-}
+};
 
-export default function About(): ReactNode {
+const About = function About(): ReactNode {
   return (
     <Page>
       <Layout>
@@ -168,4 +184,6 @@ export default function About(): ReactNode {
       </Layout>
     </Page>
   );
-}
+};
+
+export default About;

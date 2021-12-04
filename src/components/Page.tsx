@@ -5,11 +5,13 @@ interface Props {
   children?: ReactNode;
 }
 
-export default function Page({ children }: Props) {
+const Page = function Page({ children }: Props) {
   return (
     <>
       <Seo />
       {children}
     </>
   );
-}
+};
+
+export default Page;

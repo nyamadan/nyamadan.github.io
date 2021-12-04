@@ -14,7 +14,7 @@ interface Props {
   archives: readonly ArchiveData[];
 }
 
-export default function Posts({ recents, tags, archives }: Props) {
+const Posts = function Posts({ recents, tags, archives }: Props) {
   return (
     <Page>
       <Layout>
@@ -24,7 +24,7 @@ export default function Posts({ recents, tags, archives }: Props) {
       </Layout>
     </Page>
   );
-}
+};
 
 export async function getStaticProps(): Promise<{ props: Props }> {
   const slugs = getSlugs();
@@ -40,3 +40,5 @@ export async function getStaticProps(): Promise<{ props: Props }> {
     },
   };
 }
+
+export default Posts;

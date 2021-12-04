@@ -9,7 +9,7 @@ interface Props {
   prefetch?: boolean;
 }
 
-export default function PostThumbnail({ prefetch, post }: Props) {
+const PostThumbnail = function PostThumbnail({ prefetch, post }: Props) {
   const { title, description, createdAt, tags, slug } = post;
   return (
     <Link prefetch={prefetch} href={`/posts/${slug}`}>
@@ -53,4 +53,6 @@ export default function PostThumbnail({ prefetch, post }: Props) {
       </a>
     </Link>
   );
-}
+};
+
+export default PostThumbnail;

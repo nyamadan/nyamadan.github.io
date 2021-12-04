@@ -8,7 +8,7 @@ interface Props {
   pageProps: never;
 }
 
-function MyApp({ Component, pageProps }: Props) {
+const MyApp = function MyApp({ Component, pageProps }: Props) {
   return (
     <>
       <Head>
@@ -18,6 +18,6 @@ function MyApp({ Component, pageProps }: Props) {
       <Component {...pageProps} />
     </>
   );
-}
+};
 
 export default MyApp;

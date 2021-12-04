@@ -11,7 +11,7 @@ interface Props {
   url?: string;
 }
 
-export default function Seo({
+const Seo = function Seo({
   title,
   description,
   keyword,
@@ -66,4 +66,6 @@ export default function Seo({
       <link key="canonical" rel="canonical" href={urlOrDefault} />
     </Head>
   );
-}
+};
+
+export default Seo;
