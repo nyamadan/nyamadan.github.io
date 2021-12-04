@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { toFormattedDate } from "../lib/date";
 import { PostData } from "../lib/post";
-import s from "./PostThumbnail.module.css";
+import s from "./PostThumbnail.module.scss";
 
 interface Props {
   post: PostData;
