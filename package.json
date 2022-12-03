@@ -63,7 +63,7 @@
     "responsive-loader": "^2.2.1",
     "rimraf": "^3.0.2",
     "sass": "^1.32.12",
-    "sharp": "^0.29.3",
+    "sharp": "^0.30.5",
     "styled-components": "^5.2.1",
     "svg-sprite-loader": "^6.0.6",
     "tailwindcss": "^3.0.7",
