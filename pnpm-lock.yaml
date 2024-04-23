@@ -93,8 +93,8 @@ devDependencies:
     specifier: ^4.0.2
     version: 4.0.2
   gh-pages:
-    specifier: ^3.1.0
-    version: 3.1.0
+    specifier: ^5.0.0
+    version: 5.0.0
   image-size:
     specifier: ^1.0.0
     version: 1.0.0
@@ -5323,10 +5323,8 @@ packages:
     dev: true
     optional: true
 
-  /async@2.6.4:
-    resolution: {integrity: sha512-mzo5dfJYwAn29PeiJ0zvwTo04zj8HDJj0Mn8TD7sno7q12prdbnasKJHhkm2c1LgrhlJ0teaea8860oxi51mGA==}
-    dependencies:
-      lodash: 4.17.21
+  /async@3.2.5:
+    resolution: {integrity: sha512-baNZyqaaLhyLVKm/DlvdW051MSgO6b8eVfIezl9E5PqWxFgzLm/wQntEW4zOytVburDEr0JlALEpdOFwvErLsg==}
     dev: true
 
   /asynckit@0.4.0:
@@ -7675,8 +7673,8 @@ packages:
       minimalistic-crypto-utils: 1.0.1
     dev: true
 
-  /email-addresses@3.1.0:
-    resolution: {integrity: sha512-k0/r7GrWVL32kZlGwfPNgB2Y/mMXVTq/decgLczm/j34whdaspNrZO8CnXPf1laaHxI6ptUlsnAxN+UAPw+fzg==}
+  /email-addresses@5.0.0:
+    resolution: {integrity: sha512-4OIPYlA6JXqtVn8zpHpGiI7vE6EQOAg16aGnDMIAlZVinnoZ8208tW1hAbjWydgN/4PLTT9q+O1K6AH/vALJGw==}
     dev: true
 
   /emittery@0.8.1:
@@ -8857,36 +8855,23 @@ packages:
     dev: true
     optional: true
 
-  /filename-reserved-regex@1.0.0:
-    resolution: {integrity: sha512-UZArj7+U+2reBBVCvVmRlyq9D7EYQdUtuNN+1iz7pF1jGcJ2L0TjiRCxsTZfj2xFbM4c25uGCUDpKTHA7L2TKg==}
-    engines: {node: '>=0.10.0'}
-    dev: true
-
   /filename-reserved-regex@2.0.0:
     resolution: {integrity: sha512-lc1bnsSr4L4Bdif8Xb/qrtokGbq5zlsms/CYH8PP+WtCkGNF65DPiQY8vG3SakEdRn8Dlnm+gW/qWKKjS5sZzQ==}
     engines: {node: '>=4'}
     dev: true
 
-  /filenamify-url@1.0.0:
-    resolution: {integrity: sha512-O9K9JcZeF5VdZWM1qR92NSv1WY2EofwudQayPx5dbnnFl9k0IcZha4eV/FGkjnBK+1irOQInij0yiooCHu/0Fg==}
-    engines: {node: '>=0.10.0'}
+  /filenamify@2.1.0:
+    resolution: {integrity: sha512-ICw7NTT6RsDp2rnYKVd8Fu4cr6ITzGy3+u4vUujPkabyaz+03F24NWEX7fs5fp+kBonlaqPH8fAO2NM+SXt/JA==}
+    engines: {node: '>=4'}
     dependencies:
-      filenamify: 1.2.1
-      humanize-url: 1.0.1
-    dev: true
-
-  /filenamify@1.2.1:
-    resolution: {integrity: sha512-DKVP0WQcB7WaIMSwDETqImRej2fepPqvXQjaVib7LRZn9Rxn5UbvK2tYTqGf1A1DkIprQQkG4XSQXSOZp7Q3GQ==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      filename-reserved-regex: 1.0.0
+      filename-reserved-regex: 2.0.0
       strip-outer: 1.0.1
       trim-repeated: 1.0.0
     dev: true
 
-  /filenamify@2.1.0:
-    resolution: {integrity: sha512-ICw7NTT6RsDp2rnYKVd8Fu4cr6ITzGy3+u4vUujPkabyaz+03F24NWEX7fs5fp+kBonlaqPH8fAO2NM+SXt/JA==}
-    engines: {node: '>=4'}
+  /filenamify@4.3.0:
+    resolution: {integrity: sha512-hcFKyUG57yWGAzu1CMt/dPzYZuv+jAJUT85bL8mrXvNe6hWj6yEHEc4EdcgiA6Z3oi1/9wXJdZPXF2dZNgwgOg==}
+    engines: {node: '>=8'}
     dependencies:
       filename-reserved-regex: 2.0.0
       strip-outer: 1.0.1
@@ -9379,15 +9364,15 @@ packages:
       assert-plus: 1.0.0
     dev: true
 
-  /gh-pages@3.1.0:
-    resolution: {integrity: sha512-3b1rly9kuf3/dXsT8+ZxP0UhNLOo1CItj+3e31yUVcaph/yDsJ9RzD7JOw5o5zpBTJVQLlJAASNkUfepi9fe2w==}
+  /gh-pages@5.0.0:
+    resolution: {integrity: sha512-Nqp1SjkPIB94Xw/3yYNTUL+G2dxlhjvv1zeN/4kMC1jfViTEqhtVz/Ba1zSXHuvXCN9ADNS1dN4r5/J/nZWEQQ==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      async: 2.6.4
+      async: 3.2.5
       commander: 2.20.3
-      email-addresses: 3.1.0
-      filenamify-url: 1.0.0
+      email-addresses: 5.0.0
+      filenamify: 4.3.0
       find-cache-dir: 3.3.2
       fs-extra: 8.1.0
       globby: 6.1.0
@@ -10139,14 +10124,6 @@ packages:
   /human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
-    dev: true
-
-  /humanize-url@1.0.1:
-    resolution: {integrity: sha512-RtgTzXCPVb/te+e82NDhAc5paj+DuKSratIGAr+v+HZK24eAQ8LMoBGYoL7N/O+9iEc33AKHg45dOMKw3DNldQ==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      normalize-url: 1.9.1
-      strip-url-auth: 1.0.1
     dev: true
 
   /iconv-lite@0.4.24:
@@ -12912,16 +12889,6 @@ packages:
   /normalize-range@0.1.2:
     resolution: {integrity: sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /normalize-url@1.9.1:
-    resolution: {integrity: sha512-A48My/mtCklowHBlI8Fq2jFWK4tX4lJ5E6ytFsSOq1fzpvT0SQSgKhSg7lN5c2uYFOrUAOQp6zhhJnpp1eMloQ==}
-    engines: {node: '>=4'}
-    dependencies:
-      object-assign: 4.1.1
-      prepend-http: 1.0.4
-      query-string: 4.3.4
-      sort-keys: 1.1.2
     dev: true
 
   /normalize-url@2.0.1:
@@ -16275,11 +16242,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       escape-string-regexp: 1.0.5
-    dev: true
-
-  /strip-url-auth@1.0.1:
-    resolution: {integrity: sha512-++41PnXftlL3pvI6lpvhSEO+89g1kIJC4MYB5E6yH+WHa5InIqz51yGd1YOGd7VNSNdoEOfzTMqbAM/2PbgaHQ==}
-    engines: {node: '>=0.10.0'}
     dev: true
 
   /strtok3@6.3.0:
