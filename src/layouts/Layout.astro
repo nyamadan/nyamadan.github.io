@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+
+interface Props { title?: string; description?: string; }
+const {
+	title = 'nyamadan | Web & 3D Engineer',
+	description = 'Webフロントエンドと3DCG技術を得意とするプログラマ、nyamadanのポートフォリオ。',
+} = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const profileImageUrl = new URL('/profile.png', Astro.site);
+---
+
+<!doctype html>
+<html lang="ja" class="min-h-full min-w-80 scroll-smooth motion-reduce:scroll-auto">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<meta name="theme-color" content="#f4f1eb" />
+		<link rel="canonical" href={canonicalUrl} />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="ja_JP" />
+		<meta property="og:site_name" content="nyamadan" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content={profileImageUrl} />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@nyamadandan" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={profileImageUrl} />
+		<title>{title}</title>
+	</head>
+	<body class="min-h-full bg-[#f4f1eb] bg-[radial-gradient(circle_at_82%_4%,rgb(183_119_63_/_10%),transparent_28rem)] font-sans text-[#20201e] antialiased [font-synthesis:none]"><slot /></body>
+</html>
