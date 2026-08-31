@@ -13,7 +13,10 @@
     "fmt:check": "oxfmt --check",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "dev": "astro dev --host 0.0.0.0",
+    "dev": "astro dev --background --host 0.0.0.0",
+    "dev:stop": "astro dev stop",
+    "dev:status": "astro dev status",
+    "dev:logs": "astro dev logs",
     "build": "astro build",
     "preview": "astro preview --host 0.0.0.0",
     "astro": "astro"
@@ -27,18 +30,18 @@
     "oxfmt": "0.64.0",
     "oxlint": "1.79.0"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs}": [
+      "pnpm run fmt --no-error-on-unmatched-pattern",
+      "pnpm run lint"
+    ]
+  },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
       "version": "11.23.0",
       "onFail": "download"
     }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,mjs,cjs}": [
-      "pnpm run fmt --no-error-on-unmatched-pattern",
-      "pnpm run lint"
-    ]
   },
   "packageManager": "pnpm@11.23.0"
 }
