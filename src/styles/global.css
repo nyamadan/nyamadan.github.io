@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@layer base {
+  ::selection {
+    color: #fff;
+    background: #9a5327;
+  }
+
+  :focus-visible {
+    outline: 3px solid #b46532;
+    outline-offset: 4px;
+  }
+}

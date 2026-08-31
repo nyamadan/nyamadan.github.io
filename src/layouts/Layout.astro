@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 interface Props { title?: string; description?: string; }
 const {
 	title = 'nyamadan | Web & 3D Engineer',
@@ -9,7 +11,7 @@ const profileImageUrl = new URL('/profile.png', Astro.site);
 ---
 
 <!doctype html>
-<html lang="ja">
+<html lang="ja" class="min-h-full min-w-80 scroll-smooth motion-reduce:scroll-auto">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,15 +35,5 @@ const profileImageUrl = new URL('/profile.png', Astro.site);
 		<meta name="twitter:image" content={profileImageUrl} />
 		<title>{title}</title>
 	</head>
-	<body><slot /></body>
+	<body class="min-h-full bg-[#f4f1eb] bg-[radial-gradient(circle_at_82%_4%,rgb(183_119_63_/_10%),transparent_28rem)] font-sans text-[#20201e] antialiased [font-synthesis:none]"><slot /></body>
 </html>
-
-<style is:global>
-	:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #20201e; background: #f4f1eb; font-synthesis: none; }
-	* { box-sizing: border-box; }
-	html, body { margin: 0; min-width: 320px; min-height: 100%; scroll-behavior: smooth; }
-	body { background: radial-gradient(circle at 82% 4%, rgb(183 119 63 / 10%), transparent 28rem), #f4f1eb; }
-	a { color: inherit; }
-	::selection { color: #fff; background: #9a5327; }
-	:focus-visible { outline: 3px solid #b46532; outline-offset: 4px; }
-</style>
