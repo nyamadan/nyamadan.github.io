@@ -17,7 +17,6 @@ cat << EOF >> ~/.codex/config.toml
 model = "gpt-5.6-sol"
 model_reasoning_effort = "low"
 sandbox_mode = "danger-full-access"
-approval_policy = "on-request"
 check_for_update_on_startup = false
 
 [features]
