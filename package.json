@@ -33,7 +33,7 @@
     "tailwindcss": "4.3.3"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,mjs,cjs}": [
+    "*.{js,jsx,ts,tsx,mjs,cjs,astro}": [
       "pnpm run fmt --no-error-on-unmatched-pattern",
       "pnpm run lint"
     ]
