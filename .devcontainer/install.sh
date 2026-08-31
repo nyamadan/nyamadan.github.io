@@ -31,7 +31,7 @@ EOF
 mise install
 mise x -- pnpm install
 mise x -- pnpm exec astro telemetry disable
-# mise x -- pnpm run prepare
+mise x -- pnpm run prepare
 mise x -- playwright-cli install --skills=agents
 mise x -- playwright-cli install-browser chromium --with-deps
 
