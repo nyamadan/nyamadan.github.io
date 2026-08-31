@@ -1,0 +1,6 @@
+[tools]
+node = "lts"
+npm = "latest"
+pnpm = "latest"
+"npm:@openai/codex" = "latest"
+"npm:@playwright/cli" = "latest"
