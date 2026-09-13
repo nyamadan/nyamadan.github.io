@@ -12,7 +12,9 @@ ignore-scripts=true
 EOF
 
 mkdir -p ~/.codex
-cat << EOF >> ~/.codex/config.toml
+sudo chown -R "$(id -u):$(id -g)" ~/.codex
+if [ ! -e ~/.codex/config.toml ]; then
+cat << EOF > ~/.codex/config.toml
 
 model = "gpt-5.6-sol"
 model_reasoning_effort = "low"
@@ -26,6 +28,7 @@ fast_mode = false
 trust_level = "untrusted"
 
 EOF
+fi
 
 mise install
 mise x -- pnpm install
@@ -33,4 +36,3 @@ mise x -- pnpm exec astro telemetry disable
 mise x -- pnpm run prepare
 mise x -- playwright-cli install --skills=agents
 mise x -- playwright-cli install-browser chromium --with-deps
-
